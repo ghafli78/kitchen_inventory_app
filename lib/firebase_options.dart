@@ -58,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDxSMSWysVbXdsbuBwTdK8r6e3I2TaSrNs',
-    appId: '1:251909397675:android:27a7f97934c013583cabee',
+    appId: '1:251909397675:android:4605bc0411a339ee3cabee',
     messagingSenderId: '251909397675',
     projectId: 'kitchen-inventory-ad6f0',
     storageBucket: 'kitchen-inventory-ad6f0.firebasestorage.app',
@@ -66,10 +66,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDQPjh6T0jVuHhZhMrqjzh81D2M7jk7mZo',
-    appId: '1:251909397675:ios:717d9737f43516cc3cabee',
+    appId: '1:251909397675:ios:279fd1674ec942e83cabee',
     messagingSenderId: '251909397675',
     projectId: 'kitchen-inventory-ad6f0',
     storageBucket: 'kitchen-inventory-ad6f0.firebasestorage.app',
-    iosBundleId: 'com.example.flutterApplication1',
+    iosBundleId: 'com.ghafli78.kitcheninventory',
   );
+
 }
