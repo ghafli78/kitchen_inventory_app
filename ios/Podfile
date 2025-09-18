@@ -1,10 +1,31 @@
-# Uncomment this line to define a global platform for your project
 platform :ios, '12.0'
 
 use_frameworks!
 use_modular_headers!
 
+# تأكد من تحديث الـ CocoaPods عند Codemagic
+install! 'cocoapods',
+         :deterministic_uuids => false
+
 target 'Runner' do
   flutter_application_path = '../'
   eval(File.read(File.join(flutter_application_path, '.flutter-plugins-dependencies')))
+
+  # Firebase pods
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+
+  # Google Sign-In
+  pod 'GoogleSignIn'
+end
+
+# هذا يضمن التوافق مع M1 و x86_64
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+    end
+  end
 end
