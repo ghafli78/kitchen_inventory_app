@@ -11,17 +11,24 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Firebase packages
+  # Firebase core (مطلوب لأي خدمة Firebase)
   firebase_core: ^2.32.0
-  cloud_firestore: ^4.17.5
-  firebase_storage: ^11.7.7
+
+  # Authentication
   firebase_auth: ^4.16.0
 
-  # Image picker for user uploads
-  image_picker: ^1.1.1
+  # Firestore database
+  cloud_firestore: ^4.17.5
 
-  # UI & Utils
-  cupertino_icons: ^1.0.6
+  # Firebase storage
+  firebase_storage: ^11.7.7
+
+  # Google Sign-In (مطلوب للـ iOS إذا تبي تسجيل دخول بحساب Google)
+  google_sign_in: ^6.2.1
+
+  # باقي الحزم اللي تستخدمها
+  cupertino_icons: ^1.0.8
+
 
 dev_dependencies:
   flutter_test:
